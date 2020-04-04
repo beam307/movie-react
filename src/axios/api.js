@@ -21,3 +21,8 @@ export async function getRandomWeekMovie() {
 
     return selected;
 }
+
+export async function getList(type) {
+    let list = await fetchData(`movie/${type}`);
+    return list.results;
+}

@@ -1,0 +1,28 @@
+.home {
+    .backdrop {
+        height: calc(100vh - 57px - 78px);
+    }
+
+    .overlay {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .overlay-wrapper {
+        width: 50%;
+        margin: 2rem auto;
+    }
+
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .home .overlay-wrapper {
+        width: 100%;
+        padding: 0px 1rem;
+        margin: 2rem auto;
+    }
+}

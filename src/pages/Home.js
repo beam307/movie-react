@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import * as api from "../axios/api";
 import { imagePath } from '../util/constants';
 import { Card } from "react-bootstrap";
-import './main.scss';
+import './home.scss';
 
-class Main extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,18 +26,20 @@ class Main extends Component {
 
     render() {
         return (
-            <Card className="bg-dark text-white main">
+            <Card className="bg-dark text-white home">
                 {this.state.backdrop ?
                     <Card.Img className="backdrop" src={imagePath.original + this.state.backdrop}/> : null}
                 <Card.ImgOverlay className="overlay">
-                    <Card.Title className="title">{this.state.title}</Card.Title>
-                    <Card.Text className="description">
-                        {this.state.overview}
-                    </Card.Text>
+                    <div className="overlay-wrapper">
+                        <Card.Title className="title">{this.state.title}</Card.Title>
+                        <Card.Text className="description">
+                            {this.state.overview}
+                        </Card.Text>
+                    </div>
                 </Card.ImgOverlay>
             </Card>
         );
     }
 }
 
-export default Main;
+export default Home;

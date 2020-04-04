@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Main from "./pages/Main";
-import Header from "./layout/Header";
-import Footer from "./layout/Footer";
+import { Route } from 'react-router-dom';
+import { Home, List } from "./pages";
+import { Header, Footer } from "./layout";
 
 
 class App extends Component {
@@ -9,7 +9,9 @@ class App extends Component {
         return (
             <div>
                 <Header/>
-                <Main/>
+                <Route exact path="/" component={ Home }/>
+                <Route path="/list" component={ List }/>
+                <Route path="/detail/:id" component={ List }/>
                 <Footer/>
             </div>
         );

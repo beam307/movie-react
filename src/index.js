@@ -5,12 +5,15 @@ import './index.scss';
 import counterApp from './store/reducer';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from "react-router-dom";
 
 const store = createStore(counterApp);
 
 ReactDOM.render(
     <Provider store={store}>
-        <App/>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
     </Provider>,
     document.getElementById('root')
 );
