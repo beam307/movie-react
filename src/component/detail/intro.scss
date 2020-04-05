@@ -1,0 +1,111 @@
+.header {
+  border-bottom: 1px solid rgba(25.29%, 28.04%, 33.53%, 1.00);
+  background-position: right -200px top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .custom_bg {
+    background-image: linear-gradient(to right, rgba(20.78%, 24.31%, 30.98%, 1.00) 150px, rgba(29.80%, 31.76%, 36.08%, 0.84) 100%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .intro_wrapper {
+    background: transparent;
+    padding: 30px 40px;
+    max-width: 1300px;
+    width: 100%;
+  }
+
+  .real_header {
+    display: flex;
+    flex-wrap: nowrap;
+
+    .poster {
+      display: block;
+      box-sizing: border-box;
+      min-width: 300px;
+      width: 300px;
+      height: 450px;
+      position: relative;
+    }
+
+    .overview {
+      color: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: center;
+      padding-left: 40px;
+
+      .title {
+        width: 100%;
+        margin-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+
+        h2 {
+          font-size: 2.2rem;
+          width: 100%;
+          margin: 0;
+          font-weight: bold;
+        }
+
+        span.year {
+          opacity: 0.8;
+          font-weight: 400;
+        }
+
+        .facts {
+          font-size: 1em;
+          span {
+            padding-left: 20px;
+            position: relative;
+            top: 0;
+            left: 0;
+
+            &:before {
+              font-size: 1.1em;
+              line-height: 1;
+              content: '\2022';
+              position: absolute;
+              top: 0;
+              left: 7px;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+            }
+
+          }
+        }
+
+      }
+
+
+      .header_info {
+        width: 100%;
+
+        .tagline {
+          margin-bottom: 0;
+          font-size: 1.1em;
+          font-weight: 400;
+          font-style: italic;
+          opacity: 0.7;
+        }
+
+        .summary {
+          width: 100%;
+          margin: 10px 0 8px 0;
+          font-weight: 600;
+          font-size: 1.3em;
+        }
+      }
+
+
+    }
+  }
+}
+
+
+

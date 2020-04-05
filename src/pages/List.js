@@ -48,7 +48,7 @@ export default class List extends Component {
         const topRated = this.state.topRated;
         const upComing = this.state.upComing;
         return (
-            <Tabs defaultActiveKey="upComing" className="nav-fill">
+            <Tabs defaultActiveKey="nowPlaying" className="nav-fill" transition={false}>
                 <Tab eventKey="nowPlaying" title="현재 상영중">
                     <div className="row mx-3 my-2">
                         { nowPlaying.map((movie, index) =>
