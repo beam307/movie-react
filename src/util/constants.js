@@ -6,5 +6,6 @@ export const imagePath = {
     original: `${IMG_PATH}/original`,
     w200: `${IMG_PATH}/w200`,
     w300: `${IMG_PATH}/w300`,
-    w500: `${IMG_PATH}/w500`
+    w500: `${IMG_PATH}/w500`,
+    face: `${IMG_PATH}/w138_and_h175_face`
 };

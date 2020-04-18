@@ -35,7 +35,7 @@ export async function getMovieDetail(id) {
 
 export async function getMovieImages(id) {
     let images = await fetchData(`movie/${id}/images`, null, false);
-    return images.backdrops;
+    return images;
 }
 
 export async function getMovieVideos(id) {
