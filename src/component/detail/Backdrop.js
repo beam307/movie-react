@@ -11,6 +11,7 @@ export default class Backdrop extends Component {
     render() {
         const backdrops = this.props.backdrop;
         const params = {
+            shouldSwiperUpdate: true,
             breakpoints: {
                 1536: {
                     slidesPerView: 4,

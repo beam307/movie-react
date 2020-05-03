@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './detail.scss';
 import * as api from "../axios/api";
-import { Intro, Credit, Poster, Backdrop, Recommendation } from "../component/detail";
+import { Intro, Credit, Poster, Backdrop, Recommendation, Video } from "../component/detail";
 
 export default class Detail extends Component {
     constructor(props) {
@@ -10,26 +10,34 @@ export default class Detail extends Component {
             movie: {},
             cast: null,
             image: {},
-            recommendation: null
+            recommendation: null,
+            video: null
         }
     }
 
+    componentWillReceiveProps(nextProps) {
+            this.getData(nextProps.match.params.id);
+    }
+
     componentDidMount() {
-        api.getMovieDetail(this.props.match.params.id)
+        this.getData(this.props.match.params.id);
+    }
+
+    getData(id) {
+        api.getMovieDetail(id)
             .then(d => this.setState({ movie: d }));
 
-        api.getMovieCredits(this.props.match.params.id)
+        api.getMovieCredits(id)
             .then(c => this.setState({ cast: c }));
 
-        api.getMovieImages(this.props.match.params.id)
+        api.getMovieImages(id)
             .then(i => this.setState({ image: i }));
 
-        api.getMovieRecommendations(this.props.match.params.id)
+        api.getMovieRecommendations(id)
             .then(r => this.setState({ recommendation: r }));
 
-        api.getMovieVideos(this.props.match.params.id)
-            .then(r => {
-            });
+        api.getMovieVideos(id)
+            .then(r => this.setState({ video: r }));
     }
 
     render() {
@@ -42,6 +50,7 @@ export default class Detail extends Component {
                     <Poster poster={ this.state.image.posters }></Poster>
                     <Backdrop backdrop={ this.state.image.backdrops }></Backdrop>
                     <Recommendation recommendation={ this.state.recommendation }></Recommendation>
+                    <Video video={ this.state.video }></Video>
                 </div>
             </div>
         );

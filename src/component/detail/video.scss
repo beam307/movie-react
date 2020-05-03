@@ -1,0 +1,50 @@
+.video {
+    .image-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .video-image {
+            width: 100%;
+            opacity: 0.8;
+        }
+
+        .play_background {
+            cursor: pointer;
+            position: absolute;
+            width: 67px;
+            height: 67px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+
+                span {
+                    filter: invert(1);
+                    width: 50%;
+                    height: 50%;
+                    background-image: url('https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-175-play-806cb05551791b8dedd7f8d38fd3bd806e2d397fcfeaa00a5cc9129f0819fd07.svg');
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 1em;
+                    min-height: 1em;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    transition: opacity 200ms linear;
+                }
+            }
+
+        }
+    }
+}

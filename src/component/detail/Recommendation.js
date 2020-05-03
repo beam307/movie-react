@@ -12,8 +12,8 @@ export default class Recommendation extends Component {
 
     render() {
         const recommendation = this.props.recommendation;
-        console.log(recommendation);
         const params = {
+            shouldSwiperUpdate: true,
             breakpoints: {
                 1536: {
                     slidesPerView: 6,
@@ -34,15 +34,19 @@ export default class Recommendation extends Component {
             }
         };
         return (
-            <section>
+            <section className="recommend">
                 <h3 className="title">추천 영화</h3>
                 { recommendation &&
                 (<Swiper { ...params }>
                     { recommendation.map(rec => (
-                        <div key={rec.id}>
-                            <Link to={`/detail/${rec.id}`} className="movie-link">
-                                <img src={ imagePath.w300 + rec.backdrop_path }/>
+                        <div key={ rec.id }>
+                            <Link to={ `/detail/${ rec.id }` } className="movie-link">
+                                <img className="recommend-img" src={ imagePath.w300 + rec.backdrop_path }/>
                             </Link>
+                            <div className="meta">
+                                <span>{ rec.title }</span>
+                                <span>{ rec.release_date }</span>
+                            </div>
                         </div>
                     )) }
                 </Swiper>)

@@ -16,10 +16,10 @@ export default class Intro extends Component {
                 <div className="custom_bg">
                     <div className="intro_wrapper">
                         <div className="real_header">
-                            <div className="poster">
+                            <div className="poster col-sm-12 col-md-5">
                                 <img src={imagePath.w300 + this.props.movie.poster_path} alt="포스터"/>
                             </div>
-                            <div className="overview">
+                            <div className="overview col-sm-12 col-md-7">
                                 <div className="title">
                                     <h2>{this.props.movie.title} <span className="year">({release_year})</span></h2>
                                     <div className="facts">

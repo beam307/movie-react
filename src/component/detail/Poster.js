@@ -11,6 +11,7 @@ export default class Poster extends Component {
     render() {
         const posters = this.props.poster;
         const params = {
+            shouldSwiperUpdate: true,
             breakpoints: {
                 1536: {
                     slidesPerView: 6,

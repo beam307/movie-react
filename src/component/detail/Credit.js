@@ -12,6 +12,7 @@ export default class Credit extends Component {
     render() {
         const casts = this.props.cast;
         const params = {
+            shouldSwiperUpdate: true,
             breakpoints: {
                 1536: {
                     slidesPerView: 8,

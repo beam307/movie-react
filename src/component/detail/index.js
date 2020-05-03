@@ -3,3 +3,4 @@ export { default as Credit } from './Credit';
 export { default as Poster } from './Poster';
 export { default as Backdrop } from './Backdrop';
 export { default as Recommendation } from './Recommendation';
+export { default as Video } from './Video';

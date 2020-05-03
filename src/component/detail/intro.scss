@@ -20,15 +20,16 @@
 
   .real_header {
     display: flex;
-    flex-wrap: nowrap;
-
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     .poster {
       display: block;
       box-sizing: border-box;
       min-width: 300px;
-      width: 300px;
-      height: 450px;
+      max-width: 300px;
       position: relative;
+      margin-bottom: 20px;
     }
 
     .overview {
